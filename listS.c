@@ -22,7 +22,7 @@ int insertElement(int L[], int n, int x) {
 }
 
 int deleteElement(int L[], int n, int x) {
-	int i, k = 0, move = 0;
+	int i, k = n, move = 0;
 	for (i = 0; i < n; i++) {
 		if (L[i] == x) {
 			k = i;
@@ -35,7 +35,7 @@ int deleteElement(int L[], int n, int x) {
 
 	for (i = k; i < n - 1; i++)
 	{
-		L[i] = L[i - 1];
+		L[i] = L[i + 1];
 		move++;
 
 	}
